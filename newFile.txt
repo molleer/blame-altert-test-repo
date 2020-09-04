@@ -1,5 +1,5 @@
 This is a new line
 is
-a
 new
-file
+file.
+And I just added som more and more
