@@ -9,10 +9,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.context.payload.pull_request.base.ref }}
-      - name: Which branch
-        run: git branch --show-current
+      - name: Get blame
+        run: git blame --line-porcelain -L 1,6 newFile.txt
       - name: Blame Alert
         uses: molleer/blame-alert@master
         with:
