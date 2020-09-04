@@ -10,9 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.context.payload.pull_request.base.ref }}
+          ref: ${{ github.base_ref }}
       - name: Install git
-        run: apt update && apt install git -y && git branch --show-current
+        run: echo ${{ github.actor }}
       - name: Blame Alert
         uses: molleer/blame-alert@master
         with:
