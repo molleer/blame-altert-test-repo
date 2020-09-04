@@ -12,7 +12,7 @@ jobs:
         with:
           ref: ${{ github.base_ref }}
       - name: Install git
-        run: git branch --show-current
+        run: git config --list
       - name: Blame Alert
         uses: molleer/blame-alert@master
         with:
