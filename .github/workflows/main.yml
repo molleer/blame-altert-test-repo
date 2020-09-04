@@ -9,8 +9,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Get blame
-        run: git blame --line-porcelain -L 1,6 newFile.txt
+      - name: Ls
+        run: ls -al
       - name: Blame Alert
         uses: molleer/blame-alert@master
         with:
